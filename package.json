@@ -9,9 +9,9 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./react": {
-      "import": "./dist/react.js",
-      "types": "./dist/react.d.ts"
+    "./hook": {
+      "import": "./dist/hook.js",
+      "types": "./dist/hook.d.ts"
     }
   },
   "scripts": {
