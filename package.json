@@ -38,7 +38,7 @@
   ],
   "files": [
     "dist",
-    "react.d.ts"
+    "hook.d.ts"
   ],
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.2",
