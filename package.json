@@ -1,0 +1,43 @@
+{
+  "name": "@radiantguild/yoogi",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "size": "size-limit"
+  },
+  "keywords": [],
+  "author": "Alduino",
+  "license": "MIT",
+  "size-limit": [
+    {
+      "name": "Main",
+      "path": "dist/index.js"
+    },
+    {
+      "name": "React",
+      "path": "dist/react.js"
+    }
+  ],
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.2",
+    "@changesets/cli": "^2.20.0",
+    "@size-limit/preset-small-lib": "^7.0.5",
+    "@types/react": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1",
+    "react": "^16.8 || ^17 || ^18",
+    "size-limit": "^7.0.5",
+    "tsup": "^5.11.11",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17 || ^18"
+  }
+}
