@@ -2,8 +2,18 @@
   "name": "@radiantguild/yoogi",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
   "repository": "https://github.com/RadiantGuild/Lib.Yoogi",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "watch": "tsup --watch",
