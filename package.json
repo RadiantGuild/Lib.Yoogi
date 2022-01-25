@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsup",
     "watch": "tsup --watch",
-    "size": "size-limit"
+    "size": "size-limit",
+    "release": "changeset publish"
   },
   "keywords": [],
   "author": "Alduino",
