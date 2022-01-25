@@ -54,7 +54,7 @@ isInvalid(result) // true
 
 > You need React to be installed to use these hooks. You’ll get a module not found error if it isn’t.
 
-Yoogi comes built-in with a React hook, `useValidation`, which you can import from `@radiantguild/yoogi/react`. You don’t have to use it if you don’t want to, but it is there if you do. (You can [view its source](./src/useValidation.ts) to help you implement your own).
+Yoogi comes built-in with a React hook, `useValidation`, which you can import from `@radiantguild/yoogi/react`. You don’t have to use it if you don’t want to, but it is there if you do. (You can [view its source](./src/react.ts) to help you implement your own).
 
 The hook takes the source string and validators, just like the normal validate function. The hook will call `validate` initially, and then when either the source or one of the validators changes.
 
