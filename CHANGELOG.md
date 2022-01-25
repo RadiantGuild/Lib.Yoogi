@@ -1,5 +1,11 @@
 # @radiantguild/yoogi
 
+## 1.0.2
+
+### Patch Changes
+
+-   [`8808615`](https://github.com/RadiantGuild/Lib.Yoogi/commit/8808615e8cbfe6d95dac0e6f4175e9fe76618f32) Thanks [@Alduino](https://github.com/Alduino)! - Fix even more publishing issues
+
 ## 1.0.1
 
 ### Patch Changes

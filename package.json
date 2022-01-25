@@ -1,6 +1,6 @@
 {
   "name": "@radiantguild/yoogi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "repository": "https://github.com/RadiantGuild/Lib.Yoogi",
   "types": "./dist/index.d.ts",
@@ -20,7 +20,11 @@
     "size": "size-limit",
     "release": "pnpm build && changeset publish"
   },
-  "keywords": ["validation", "tiny", "react"],
+  "keywords": [
+    "validation",
+    "tiny",
+    "react"
+  ],
   "author": "Alduino",
   "size-limit": [
     {
