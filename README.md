@@ -54,7 +54,7 @@ isInvalid(result) // true
 
 > You need React to be installed to use these hooks. You’ll get a module not found error if it isn’t.
 
-Yoogi comes built-in with a React hook, `useValidation`, which you can import from `@radiantguild/yoogi/react`. You don’t have to use it if you don’t want to, but it is there if you do. (You can [view its source](./src/react.ts) to help you implement your own).
+Yoogi comes built-in with a React hook, `useValidation`, which you can import from `@radiantguild/yoogi/hook`. You don’t have to use it if you don’t want to, but it is there if you do. (You can [view its source](./src/hook.ts) to help you implement your own).
 
 The hook takes the source string and validators, just like the normal validate function. The hook will call `validate` initially, and then when either the source or one of the validators changes.
 
@@ -119,6 +119,8 @@ The validate function returns the validation result, which has the following pro
 - `abort`: A function that takes no parameters, that, when called, will trigger every async validator’s abort signal. They can do what they want with it.
 
 ### `useValidation` hook
+
+> This function is from `@radiantguild/yoogi/hook`, as it requires an extra dependency on React.
 
 Passed the same parameters as `validate` (see above). Calls validate once initially and then whenever the source or one of the validators changes. Triggers renders automatically when the validation result changes, including re-calling validate, or when asynchronous validation completes.
 
