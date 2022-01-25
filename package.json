@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "main": "dist/index.js",
+  "repository": "https://github.com/RadiantGuild/Lib.Yoogi",
   "scripts": {
     "build": "tsup",
     "watch": "tsup --watch",
