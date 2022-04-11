@@ -1,5 +1,11 @@
 # @radiantguild/yoogi
 
+## 1.0.3
+
+### Patch Changes
+
+-   [`f39de2a`](https://github.com/RadiantGuild/Lib.Yoogi/commit/f39de2a473e68073d2805e8c959fd43cb3f992f1) Thanks [@Alduino](https://github.com/Alduino)! - Deep compare `useValidation` hook options
+
 ## 1.0.2
 
 ### Patch Changes
