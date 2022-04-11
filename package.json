@@ -58,5 +58,8 @@
   },
   "peerDependencies": {
     "react": "^16.8 || ^17 || ^18"
+  },
+  "dependencies": {
+    "use-deep-compare-effect": "^1.8.1"
   }
 }

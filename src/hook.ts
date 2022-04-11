@@ -1,4 +1,5 @@
 import {useCallback, useDebugValue, useEffect, useMemo, useState} from "react";
+import {useDeepCompareMemoize} from "use-deep-compare-effect";
 import AsyncValidationOptions from "./AsyncValidationOptions";
 import {validate} from "./validate";
 import {CompleteValidateResult, ValidateResult} from "./validation-results";
@@ -27,7 +28,9 @@ export const useValidation: ValidateHook = ((
     validators: Validator[],
     opts?: AsyncValidationOptions
 ): ValidateHookResult => {
-    const doValidate = useCallback(() => validate(src, validators, opts), [src, opts, ...validators]);
+    const optsMemo = useDeepCompareMemoize(opts);
+
+    const doValidate = useCallback(() => validate(src, validators, optsMemo), [src, optsMemo, ...validators]);
 
     const [result, setResult] = useState(() => doValidate());
 
