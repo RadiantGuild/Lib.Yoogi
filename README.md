@@ -22,7 +22,7 @@ if (isInvalid(result)) {
 }
 
 // will log something like:
-// > not valid: { validator: (valueof uppercaseValidator), message: "it isn't uppercase!" }
+// > not valid: { validator: (valueof uppercaseValidator), error: { key: "it isn't uppercase!" } }
 ```
 
 ## Asynchronous validators
@@ -76,10 +76,12 @@ function ValidatedInput({validationResult, value, onChange}) {
 
 function App() {
     const [value, setValue] = useState("");
-    const validationResult = useValidation(value, [serverValidator]);
+    
+    const validationValue = useDeferredValue(value);
+    const validationResult = useValidation(validationValue, [serverValidator]);
     
     return (
-        // note: don't do it like this irl - the input will disappear as you type
+        // note: don't do it like this irl - the input may disappear as you type
     	<Suspense fallback={<p>Loading...</p>}>
         	<ValidatedInput validationResult={validationResult} value={value} onChange={setValue} />
         </Suspense>
@@ -113,7 +115,7 @@ The validate function returns the validation result, which has the following pro
 - `isLoading`: If this is true, the validator is still loading. `isValid` and `error` will be undefined, and the `promise`  and `abort` fields will exist.
 - `error`: If `isValid` is set to `false`, this will be an object containing:
   - `validator`: The validator that failed (the exact value passed into the array)
-  - `msg`: The validator’s error message. The same as `error.validator.errorMessage`.
+  - `key`: The validator’s error message. The same as `error.validator.errorMessage`.
   - `ctx`: The validator’s translation context, if it has one. The same as `error.validator.transCtx`.
 - `promise`: If `isLoading` is set to `true`, this will be a promise that will resolve with a complete validation result (`isLoading` will be set to false), when every async validator has finished loading
 - `abort`: A function that takes no parameters, that, when called, will trigger every async validator’s abort signal. They can do what they want with it.
