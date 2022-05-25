@@ -30,12 +30,19 @@ export const useValidation: ValidateHook = ((
 ): ValidateHookResult => {
     const optsMemo = useDeepCompareMemoize(opts);
 
-    const doValidate = useCallback(() => validate(src, validators, optsMemo), [src, optsMemo, ...validators]);
+    const doValidate = useCallback(
+        () => validate(src, validators, optsMemo),
+        [src, optsMemo, ...validators]
+    );
 
     const [result, setResult] = useState(() => doValidate());
 
     useDebugValue(result, res =>
-        res.isValid ? "valid" : `invalid: ${res.error.key}`
+        res.isValid
+            ? "valid"
+            : res.isLoading
+            ? "loading"
+            : `invalid: ${res.error.key}`
     );
 
     const read = useCallback(() => {
