@@ -1,5 +1,11 @@
 # @radiantguild/yoogi
 
+## 1.0.4
+
+### Patch Changes
+
+-   [#7](https://github.com/RadiantGuild/Lib.Yoogi/pull/7) [`cfcc100`](https://github.com/RadiantGuild/Lib.Yoogi/commit/cfcc1001ad962c5fa73bfcc1ebb6b6188fc57f5a) Thanks [@Alduino](https://github.com/Alduino)! - Fixed an exception in the React dev tools when using the `useValidation` hook
+
 ## 1.0.3
 
 ### Patch Changes
