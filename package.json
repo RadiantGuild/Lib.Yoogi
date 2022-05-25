@@ -26,14 +26,15 @@
     "react"
   ],
   "author": "Alduino",
+  "packageManager": "pnpm@7.1.0",
   "size-limit": [
     {
       "name": "Main",
       "path": "dist/index.js"
     },
     {
-      "name": "React",
-      "path": "dist/react.js"
+      "name": "React hook",
+      "path": "dist/hook.js"
     }
   ],
   "files": [
